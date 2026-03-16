@@ -426,21 +426,60 @@
 
     <!-- Globe card -->
     <div class="mt-20 relative">
-      <div class="w-full h-80 bg-slate-950 rounded-[3rem] flex items-center justify-center overflow-hidden border border-white/10 shadow-2xl relative">
-        <div class="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-accent-pink/20"></div>
-        <div class="relative z-10 flex flex-col items-center">
-          <div class="size-20 rounded-full bg-white/5 backdrop-blur-xl flex items-center justify-center mb-6 border border-white/10" style="box-shadow:0 0 15px rgba(124,13,242,0.4)">
-            <span class="material-symbols-outlined text-5xl text-accent-teal" style="animation:pulse 2s infinite">public</span>
-          </div>
-          <p class="font-black text-2xl text-white tracking-tight">Serving clients in 120+ countries</p>
-          <p class="text-slate-500 mt-2 font-medium">Over 50 million messages processed monthly</p>
-          <div class="mt-6 flex items-center gap-2 px-5 py-2 bg-white/5 rounded-full border border-white/10">
-            <span class="material-symbols-outlined text-accent-teal text-sm">credit_card</span>
-            <p class="text-xs font-black text-slate-300">Local payment methods supported in every market</p>
-          </div>
-        </div>
+  <div class="w-full h-80 bg-slate-950 rounded-[3rem] flex items-center justify-center overflow-hidden border border-white/10 shadow-2xl relative">
+
+    <!-- gradient overlays -->
+    <div class="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-accent-pink/20 z-10 pointer-events-none"></div>
+
+    <!-- ★ World map PNG — glass/frosted effect (DARK) -->
+    <img
+      src="assets/img/worldmap.png"
+      alt=""
+      aria-hidden="true"
+      style="
+        position: absolute; inset: 0;
+        width: 200%; height: 200%;
+        top: -80%; left: -5%;
+        object-fit: cover; object-position: center;
+        opacity: 0.03;
+        filter: brightness(1.4) contrast(1.1);
+        mix-blend-mode: luminosity;
+        pointer-events: none;
+      "
+    />
+
+    <!-- subtle dot-grid texture -->
+    <div style="
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(circle, rgba(148,163,184,0.10) 1px, transparent 1px);
+      background-size: 18px 18px;
+    "></div>
+
+    <!-- frosted glass shimmer -->
+    <div style="
+      position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(135deg,
+        rgba(255,255,255,0.03) 0%,
+        transparent 50%,
+        rgba(124,13,242,0.04) 100%
+      );
+    "></div>
+
+    <!-- content -->
+    <div class="relative z-20 flex flex-col items-center">
+      <div class="size-20 rounded-full bg-white/5 backdrop-blur-xl flex items-center justify-center mb-6 border border-white/10" style="box-shadow:0 0 15px rgba(124,13,242,0.4)">
+        <span class="material-symbols-outlined text-5xl text-accent-teal" style="animation:pulse 2s infinite">public</span>
+      </div>
+      <p class="font-black text-2xl text-white tracking-tight">Serving clients in 120+ countries</p>
+      <p class="text-slate-500 mt-2 font-medium">Over 50 million messages processed monthly</p>
+      <div class="mt-6 flex items-center gap-2 px-5 py-2 bg-white/5 rounded-full border border-white/10">
+        <span class="material-symbols-outlined text-accent-teal text-sm">credit_card</span>
+        <p class="text-xs font-black text-slate-300">Local payment methods supported in every market</p>
       </div>
     </div>
+  </div>
+</div>
+
   </div>
 </section>
 
